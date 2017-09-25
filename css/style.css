@@ -1,0 +1,131 @@
+@charset "utf-8";
+/**
+* 功能：无缝图片轮播
+* 时间：2017年3月27日
+*/
+body,html,div{
+    margin: 0;
+    padding: 0;
+}
+body,html{
+    width: 100%;
+    height: 100%;
+}
+body{
+    background-color: #b4b2b2;
+    overflow: hidden;
+}
+div,header{
+    box-sizing: border-box;
+}
+header{
+    margin-top: 10px;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+.content{
+    width:1200px;
+    height: 500px;
+    margin: 0 auto;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    font-size: 0;
+    position: relative;
+    box-shadow: 0 0 80px #000;
+}
+.content div{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.content div a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: 1.0s;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.left1 {
+    background-image: url("../img/login_img.jpg");
+}
+.left2 {
+    background-image: url("../img/saver_img.jpg");
+}
+.left3 {
+    background-image: url("../img/back_img.jpg");
+}
+.left4 {
+    background-image: url("../img/img_2.jpg");
+}
+.radio {
+    width: 200px;
+    height: 30px;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding-top: 5px;
+    text-align: center;
+}
+.radio span{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #2288a7;
+    border-radius: 50%;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.radio .left1_rad {
+    background-color: rgba(255, 4, 4, 0.83);
+}
+/*按钮*/
+.btn {
+    margin-top: 10px;
+}
+.btn .left , .btn .right{
+    display: inline-block;
+    width: 70px;
+    height: 100%;
+    border: none;
+    text-align: center;
+}
+.btn .left {
+    position: absolute;
+    top: 0;
+    left:83px;
+}
+.left .left_img, .right .right_img{
+    display: inline-block;
+    width: 20px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: calc(318% - 12px);
+    cursor: pointer;
+}
+.left .left_img{
+    background-image: url("../img/left.png");
+}
+.left .left_img:hover,.right .right_img:hover{
+    background-color: rgba(255, 255, 255, 0.36);
+}
+.btn .right{
+    position: absolute;
+    top: 0;
+    right: 83px;
+}
+.right .right_img{
+    background-image: url("../img/right.png");
+}
+.btn button:active{
+    color: #fff;
+    background-color: #a02828;
+}
